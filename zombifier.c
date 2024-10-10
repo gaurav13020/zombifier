@@ -75,14 +75,13 @@ int main(int argc, char *argv[]) {
     }
     
     printf("\nAll zombie processes created. Parent PID: %d\n", getpid());
-    printf("To verify zombies, run: ps -l | grep Z\n");
 
     printf("parent process pausing for SIGCONT %d \n", getpid());
     pause(); // Wait for signals
 
     printf("Press Enter to cleanup zombies and exit...\n");
     
-    getchar();  // Wait for user input
+    
     
     // Cleanup zombies
     for (int i = 0; i < num_zombies; i++) {
