@@ -77,6 +77,8 @@ int main(int argc, char *argv[]) {
     printf("\nAll zombie processes created. Parent PID: %d\n", getpid());
 
     printf("parent process pausing for SIGCONT %d \n", getpid());
+    printf("To verify zombies, run: ps -l | grep Z\n");
+    printf("To kill zombies, run: kill -s SIGCONT <pid>\n");
     pause(); // Wait for signals
 
     printf("Press Enter to cleanup zombies and exit...\n");
